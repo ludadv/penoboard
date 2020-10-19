@@ -19,7 +19,7 @@ let path = {
     },
     watch: {
         html: sorce_folder + "/**/*.html",
-        css: sorce_folder + "/sass/style.scss",
+        css: sorce_folder + "/sass/**/*.{scss,css}",
         js: sorce_folder + "/js/**/*.js",
         img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,jpg}",
         fonts: sorce_folder + "/fonts/*.{ttf,woff}",
@@ -40,7 +40,7 @@ let {src, dest} = require('gulp'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
     rigger = require('gulp-rigger')
-    imagemin = require('gulp-imagemin')
+    imagemin = require('gulp-imagemin'),
     ttf2woff = require('gulp-ttf2woff')
 
 // svgSprite = require('gulp-svg-sprite')

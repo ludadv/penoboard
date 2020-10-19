@@ -265,11 +265,14 @@ img {
   }
   &__left {
     position: absolute;
-    top: 50%;
+    top: 150px;
+    left: 0;
+    text-align: right;
   }
   &__text {
     font-size: 1.875rem;
     line-height: 1;
+    padding: 20px;
   }
   &__number {
     font-size: 4.5rem;
@@ -277,18 +280,32 @@ img {
     font-weight: 700;
   }
   &__right {
+    display: flex;
     position: absolute;
-    right: 5%;
-    font-size: 10.188rem;
-    line-height: 4.25rem;
+    top: 150px;
+    right: 0;
+    &__number {
+      font-size: 10.188rem;
+      line-height: 4.25rem;
+    }
+    span {
+      font-size: 5.102rem;
+    }
   }
   &__bottom {
+    width: 600px;
     position: absolute;
+    left: 50%;
+    top: 300px;
 
-    display: inline-block;
   }
 }
 
+//certificates
+
+.certificates {
+  text-align: center;
+}
 
 
 
