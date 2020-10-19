@@ -1,8 +1,9 @@
-let project_folder = "dist";
-let sorce_folder = "src";
+let project_folder="dist";
+let sorce_folder="src";
+
 
 let path = {
-    build: {
+    build:{
         html: project_folder + "/",
         css: project_folder + "/css/",
         js: project_folder + "/js/",
@@ -13,14 +14,15 @@ let path = {
         html: [sorce_folder + "/*.html", "!" + sorce_folder + "/_*.html"],
         css: sorce_folder + "/sass/style.scss",
         js: sorce_folder + "/js/**/*.js",
-        img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,webp}",
-        fonts: sorce_folder + "/fonts/*ttf ",
+        img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,jpg}",
+        fonts: sorce_folder + "/fonts/*.{ttf,woff}",
     },
     watch: {
         html: sorce_folder + "/**/*.html",
         css: sorce_folder + "/sass/style.scss",
         js: sorce_folder + "/js/**/*.js",
-        img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,webp}",
+        img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,jpg}",
+        fonts: sorce_folder + "/fonts/*.{ttf,woff}",
     },
     clean: "./" + project_folder + "/"
 }
@@ -38,6 +40,7 @@ let {src, dest} = require('gulp'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
     imagemin = require('gulp-imagemin')
+    ttf2woff = require('gulp-ttf2woff')
 
 // svgSprite = require('gulp-svg-sprite')
 
@@ -115,6 +118,12 @@ function images() {
         .pipe(browsersync.stream())
 }
 
+function fonts(params) {
+    src(path.src.fonts)
+        .pipe(ttf2woff())
+        .pipe(dest(path.build.fonts));
+}
+
 function watchFiles(params) {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
@@ -126,9 +135,10 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
 exports.css = css;
