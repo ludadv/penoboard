@@ -31,6 +31,7 @@ let {src, dest} = require('gulp'),
     fileinclude = require('gulp-file-include'),
     del = require('del'),
     scss = require('gulp-sass'),
+    concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     clean_css = require('gulp-clean-css'),
     rename = require('gulp-rename'),
@@ -70,6 +71,7 @@ function css() {
                 cascade: true
             })
         )
+        .pipe(concat('bundle.css'))
         .pipe(dest(path.build.css))
         .pipe(clean_css())
         .pipe(
@@ -84,6 +86,7 @@ function css() {
 function js() {
     return src(path.src.js)
         .pipe(fileinclude())
+        .pipe(concat('bundle.js'))
         .pipe(dest(path.build.js)) // Delete for production
         .pipe(
             uglify()
