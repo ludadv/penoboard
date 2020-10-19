@@ -13,7 +13,7 @@ let path = {
     src: {
         html: [sorce_folder + "/*.html", "!" + sorce_folder + "/_*.html"],
         css: sorce_folder + "/sass/style.scss",
-        js: sorce_folder + "/js/**/*.js",
+        js: sorce_folder + "/js/*.js",
         img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,jpg}",
         fonts: sorce_folder + "/fonts/*.{ttf,woff}",
     },
@@ -39,6 +39,7 @@ let {src, dest} = require('gulp'),
     clean_css = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
+    rigger = require('gulp-rigger')
     imagemin = require('gulp-imagemin')
     ttf2woff = require('gulp-ttf2woff')
 
@@ -89,7 +90,7 @@ function css() {
 
 function js() {
     return src(path.src.js)
-        .pipe(fileinclude())
+        .pipe(rigger())
         .pipe(concat('bundle.js'))
         .pipe(dest(path.build.js)) // Delete for production
         .pipe(
