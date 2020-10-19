@@ -40,6 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+/*_______________________________*/
+    $('.popup-content').magnificPopup({
+        type: 'inline'
+    });
+
 });
 
 // slick

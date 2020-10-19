@@ -39,7 +39,7 @@ let {src, dest} = require('gulp'),
     clean_css = require('gulp-clean-css'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
-    rigger = require('gulp-rigger')
+    rigger = require('gulp-rigger'),
     imagemin = require('gulp-imagemin'),
     ttf2woff = require('gulp-ttf2woff')
 
