@@ -1,25 +1,37 @@
 // ---------------------------- BEGIN SCRIPTS ----------------------------
 document.addEventListener("DOMContentLoaded", function () {
     // validation form jquery
-    $("button[type='submit']").click(function () {
-        // собираем данные в один массив
-        var username = $("input[name='username']").val().trim();
-        var password = $("input[name='password']").val().trim();
+    $(document).ready(function(){
+        $(".valid").validate({
+            rules:{
+                login:{
+                    required: true,
+                    minlength: 4,
+                    maxlength: 16,
+                },
+                pswd:{
+                    required: true,
+                    minlength: 6,
+                    maxlength: 16,
+                },
+            },
+            messages:{
+                login:{
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Логин должен быть минимум 4 символа",
+                    maxlength: "Максимальное число символов - 16",
+                },
+                pswd:{
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Пароль должен быть минимум 6 символа",
+                    maxlength: "Пароль должен быть максимум 16 символов",
+                },
+            }
+        });
 
-        //обрабатываю данные
-        var error_arr = [];
-        if (username.length == 0) error_arr.push('логин');
-        if (password.length == 0) error_arr.push('пароль');
-
-        // проверка на наличие ошибок
-        if (error_arr.length > 0) {
-            alert("Вы не заполнили следующие поля:\n" + error_arr.join(', '));
-            // блокировка перехода на другую страницу
-            return false;
-        } else {
-            console.log("Ошибок нет!");
-        }
     });
+
+
 
     /*magnific from form*/
     $('.first-popup-link, .second-popup-link').magnificPopup({
@@ -41,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 /*_______________________________*/
-    $('.popup-content').magnificPopup({
-        type: 'inline'
-    });
+    // $('.popup-content').magnificPopup({
+    //     closeOnBgClick: true,
+    // });
 
 });
 
@@ -54,9 +66,7 @@ $('.single-item').slick({
     dotsClass: 'custom-dots',
 });
 
-// $('.parallax-window').parallax({imageSrc: '../img/mask.png'});
 
-//counter
 
 // ---------------------------- END SCRIPTS ----------------------------
 

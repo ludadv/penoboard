@@ -11,4 +11,9 @@ $ = jQuery;
 /* include Magnific Popup */
 //= plugins/jquery.magnific-popup.min.js
 /* end include Magnific Popup */
+
+/* include Validate */
+//= plugins/jquery.validate.min.js
+/* end include Magnific Popup */
+
 /* **************************** END PLUGINS **************************** */
