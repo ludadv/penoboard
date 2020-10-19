@@ -1,22 +1,22 @@
-let project_folder="dist";
-let sorce_folder="src";
+let project_folder = "dist";
+let sorce_folder = "src";
 
-let path={
-    build:{
+let path = {
+    build: {
         html: project_folder + "/",
         css: project_folder + "/css/",
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
     },
-    src:{
+    src: {
         html: [sorce_folder + "/*.html", "!" + sorce_folder + "/_*.html"],
         css: sorce_folder + "/sass/style.scss",
-        js: sorce_folder + "/js/script.js",
+        js: sorce_folder + "/js/**/*.js",
         img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,webp}",
         fonts: sorce_folder + "/fonts/*ttf ",
     },
-    watch:{
+    watch: {
         html: sorce_folder + "/**/*.html",
         css: sorce_folder + "/sass/**/*.scss",
         js: sorce_folder + "/js/**/*.js",
@@ -25,7 +25,7 @@ let path={
     clean: "./" + project_folder + "/"
 }
 
-let { src, dest } = require('gulp'),
+let {src, dest} = require('gulp'),
     gulp = require('gulp'),
     browsersync = require('browser-sync').create(),
     fileinclude = require('gulp-file-include'),
@@ -36,7 +36,8 @@ let { src, dest } = require('gulp'),
     rename = require('gulp-rename'),
     uglify = require('gulp-uglify-es').default,
     imagemin = require('gulp-imagemin')
-    // svgSprite = require('gulp-svg-sprite')
+
+// svgSprite = require('gulp-svg-sprite')
 
 
 function browserSync(params) {
@@ -64,7 +65,7 @@ function css() {
             })
         )
         .pipe(
-            autoprefixer ({
+            autoprefixer({
                 overrideBrowserslist: ["last 5 versions"],
                 cascade: true
             })
@@ -83,7 +84,7 @@ function css() {
 function js() {
     return src(path.src.js)
         .pipe(fileinclude())
-        .pipe(dest(path.build.js))
+        .pipe(dest(path.build.js)) // Delete for production
         .pipe(
             uglify()
         )
@@ -101,7 +102,7 @@ function images() {
         .pipe(
             imagemin({
                 progressive: true,
-                svgoPlugins: [{ removeViewBox: false }],
+                svgoPlugins: [{removeViewBox: false}],
                 interlaced: true,
                 optimizationLevel: 3
             })
@@ -117,7 +118,7 @@ function watchFiles(params) {
     gulp.watch([path.watch.img], images);
 }
 
-function clean(params){
+function clean(params) {
     return del(path.clean);
 }
 
