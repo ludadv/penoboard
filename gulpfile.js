@@ -11,14 +11,14 @@ let path = {
     },
     src: {
         html: [sorce_folder + "/*.html", "!" + sorce_folder + "/_*.html"],
-        css: sorce_folder + "/sass/style.scss",
+        css: sorce_folder + "/sass/**/*.{scss,css}",
         js: sorce_folder + "/js/**/*.js",
         img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,webp}",
         fonts: sorce_folder + "/fonts/*ttf ",
     },
     watch: {
         html: sorce_folder + "/**/*.html",
-        css: sorce_folder + "/sass/**/*.scss",
+        css: sorce_folder + "/sass/**/*.{scss,css}",
         js: sorce_folder + "/js/**/*.js",
         img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,webp}",
     },
