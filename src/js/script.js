@@ -1,6 +1,8 @@
 
-// import 'zz.js'
-// validation form jquery
+// import 'slick'
+
+// validation
+
 $("button[type='submit']").click(function (){
     // собираем данные в один массив
     var username = $("input[name='username']").val().trim();
