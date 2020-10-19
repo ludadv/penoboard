@@ -11,14 +11,14 @@ let path = {
     },
     src: {
         html: [sorce_folder + "/*.html", "!" + sorce_folder + "/_*.html"],
-        css: sorce_folder + "/sass/**/*.{scss,css}",
+        css: sorce_folder + "/sass/style.scss",
         js: sorce_folder + "/js/**/*.js",
         img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,webp}",
         fonts: sorce_folder + "/fonts/*ttf ",
     },
     watch: {
         html: sorce_folder + "/**/*.html",
-        css: sorce_folder + "/sass/**/*.{scss,css}",
+        css: sorce_folder + "/sass/style.scss",
         js: sorce_folder + "/js/**/*.js",
         img: sorce_folder + "/img/**/*.{img,png,svg,gif,ico,webp}",
     },
@@ -31,6 +31,7 @@ let {src, dest} = require('gulp'),
     fileinclude = require('gulp-file-include'),
     del = require('del'),
     scss = require('gulp-sass'),
+    cssimport = require("gulp-cssimport"),
     concat = require('gulp-concat'),
     autoprefixer = require('gulp-autoprefixer'),
     clean_css = require('gulp-clean-css'),
@@ -66,12 +67,12 @@ function css() {
             })
         )
         .pipe(
-            autoprefixer({
+            autoprefixer ({
                 overrideBrowserslist: ["last 5 versions"],
                 cascade: true
             })
         )
-        .pipe(concat('bundle.css'))
+        .pipe(cssimport({}))
         .pipe(dest(path.build.css))
         .pipe(clean_css())
         .pipe(
