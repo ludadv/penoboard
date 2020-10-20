@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     minlength: 6,
                     maxlength: 16,
                 },
+                // email:{
+                //     required: true,
+                //     email: true,
+                // },
             },
             messages:{
                 login:{
@@ -26,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     minlength: "Пароль должен быть минимум 6 символа",
                     maxlength: "Пароль должен быть максимум 16 символов",
                 },
+                // email:{
+                //     required: "Это поле обязательно для заполнения",
+                //     email: "Email заполнен не корректно",
+                // },
             }
         });
 
@@ -64,6 +72,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+/*counter*/
+
+function countup(className){
+    var countBlockTop = $("."+className).offset().top;
+    var windowHeight = window.innerHeight;
+    var show = true;
+
+    $(window).scroll( function (){
+        if(show && (countBlockTop < $(window).scrollTop() + windowHeight)){
+            show = false;
+
+            $('.'+className).spincrement({
+                from: 1,
+                duration: 4000,
+                thousandSeparator: '',
+            });
+        }
+    })
+}
+
+
+$(function() {
+    countup("count", $(".count").text());
+    countup("count2", $(".count2").text());
+    countup("count3", $(".count3").text());
+});
+
+
 
 // slick
 $('.single-item').slick({

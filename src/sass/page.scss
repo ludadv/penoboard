@@ -222,7 +222,7 @@ img {
 }
 
 //form
-.registration {
+form {
   display: flex;
   flex-direction: column;
   max-width: 350px;
@@ -288,9 +288,9 @@ img {
       font-size: 10.188rem;
       line-height: 4.25rem;
     }
-    span {
-      font-size: 5.102rem;
-    }
+    //span {
+    //  font-size: 5.102rem;
+    //}
   }
   &__bottom {
     width: 600px;
