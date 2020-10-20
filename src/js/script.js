@@ -53,9 +53,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 /*_______________________________*/
-    // $('.popup-content').magnificPopup({
-    //     closeOnBgClick: true,
-    // });
+    $('.popup-content').magnificPopup({
+        type: 'image',
+        closeBtnInside: true,
+        zoom: {
+            enabled: true,
+            duration: 300 // don't foget to change the duration also in CSS
+        }
+    });
+
 
 });
 
@@ -65,6 +71,8 @@ $('.single-item').slick({
     dots: true,
     dotsClass: 'custom-dots',
 });
+
+
 
 
 

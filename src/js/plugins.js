@@ -16,4 +16,12 @@ $ = jQuery;
 //= plugins/jquery.validate.min.js
 /* end include Magnific Popup */
 
+
+/* include Validate */
+//= plugins/jquery.spincrement.min.js
+/* end include Magnific Popup */
+
+
+
+
 /* **************************** END PLUGINS **************************** */
