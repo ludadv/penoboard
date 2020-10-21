@@ -13,19 +13,17 @@ body {
 :after {
   box-sizing: border-box;
 }
-
 a {
   text-decoration: none;
 }
-
 ul {
   padding: 0;
   margin: 0;
+
   li {
     list-style: none;
   }
 }
-
 img {
   max-width: 100%;
   height: auto;
@@ -45,19 +43,28 @@ img {
   max-width: 1920px;
   margin: 0 auto;
 }
-
 .header {
-  display: flex;
-  align-items: center;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  z-index: 3;
+  box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
   background-image: url("../img/header-fon.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  width: 100%;
-  height: 75px;
-  box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
-}
+  transition: all 0.3s linear;
 
+  &__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &.animate {
+    height: 50px;
+  }
+}
 .menu {
   display: flex;
   flex-direction: row;
@@ -71,10 +78,10 @@ img {
     text-transform: uppercase;
     padding: 5px 0;
     margin-right: 20px;
+
     a {
       color: $white;
     }
-
 
     &:last-child {
       margin-right: 0;
@@ -106,10 +113,12 @@ img {
      {
       opacity: 1;
     }
+
     i {
       color: $white;
       cursor: pointer;
     }
+
     ul {
       padding: 10px 0;
       display: block;
@@ -120,9 +129,11 @@ img {
       background-color: $green;
       opacity: 0;
       transition: opacity .3s linear;
+
       li {
         text-transform: capitalize;
         padding-bottom: 10px;
+
         a {
           color: rgba(255, 255, 255, .5);
           &:hover {
@@ -131,27 +142,32 @@ img {
         }
       }
     }
+
     &:hover ul {
       opacity: 1;
     }
   }
 }
 /*--------------------*/
-.sliderblock {
+.slider-block {
   background-image: url("../img/slider-fon.jpg");
   height: 938px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  margin-top: 75px;
+
   &__inner {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 20px 0;
   }
+
   &__form {
     text-align: right;
     padding-right: 15px;
+
     a {
       color: $green;
       &:hover {
@@ -159,6 +175,7 @@ img {
       }
     }
   }
+
   &__right {
     display: flex;
     flex-direction: column;
@@ -166,34 +183,66 @@ img {
     max-width: 470px;
     width: 100% ;
     padding-left: 100px;
-  }
-  &__content {
-   display: flex;
-    justify-content: space-between;
 
   }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    select {
+      border: none;
+      appearance: none;
+      font-size: 0.75rem;
+      color: $textcolor-blue;
+      text-transform: uppercase;
+      font-weight: 700;
+      background-image: url("../img/down-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: left center;
+      padding-left: 10px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .1);
+      }
+
+      option {
+        color: $textcolor-blue;
+        font-weight: 700;
+      }
+    }
+  }
+
   .search-block {
     display: flex;
     align-items: flex-end;
   }
+
   .line {
     width: 100%;
     height: 2px;
     background-color: $textcolor-blue;
     opacity: 0.3;
   }
+
   &__contacts {
+
     a {
       color: $textcolor-blue;
       font-size: 1rem;
       line-height: 1.1;
       font-weight: 700;
+      transition: color .3s linear;
+
+      &:hover {
+        color: #110e4b;
+      }
     }
   }
 }
 
 .slider {
   position: relative;
+
   &__text {
     position: absolute;
     bottom: 35px;
@@ -206,15 +255,18 @@ img {
     text-transform: uppercase;
     padding: 30px 10px 10px;
   }
+
   &__title {
     font-size: 1.875rem;
     line-height: 1;
     font-weight: 300;
     margin-bottom: 15px;
+
     &--align {
       text-align: center;
     }
   }
+
   &__subtitle {
     font-size: 1.5rem;
     font-weight: 700;
@@ -232,19 +284,19 @@ form {
   border-right: 5px;
   text-align: center;
   margin: 0 auto;
+
   input {
     width: 100%;
     margin-top: 20px;
     padding: 10px;
   }
+
   button {
     margin: 0 auto;
     max-width: 160px;
     padding: 10px 20px;
     margin-top: 20px;
   }
-
-
 }
 
 .block-counter {
@@ -253,58 +305,73 @@ form {
   background-image: url('../img/counter-block.jpg');
   background-repeat: no-repeat;
   background-position: center center;
+
   &__inner {
     position: relative;
     color: $white;
     text-transform: uppercase;
   }
+
   &__title {
     font-size: 2.5rem;
     line-height: 3;
     text-align: center;
   }
+
   &__left {
     position: absolute;
     top: 150px;
     left: 0;
     text-align: right;
   }
+
   &__text {
     font-size: 1.875rem;
     line-height: 1;
     padding: 20px;
   }
+
   &__number {
     font-size: 4.5rem;
     line-height: 1.875rem;
     font-weight: 700;
   }
+
   &__right {
     display: flex;
     position: absolute;
     top: 150px;
     right: 0;
+
     &__number {
       font-size: 10.188rem;
       line-height: 4.25rem;
     }
-    //span {
-    //  font-size: 5.102rem;
-    //}
   }
+
   &__bottom {
     width: 600px;
     position: absolute;
     left: 50%;
     top: 300px;
-
   }
 }
 
 //certificates
 
 .certificates {
+  padding: 55px 0 45px;
   text-align: center;
+  &__title {
+    font-size: 1.875rem;
+    line-height: 1;
+    color: $textcolor-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.625rem;
+    padding-bottom: 20px;
+  }
+
   &__box {
     display: flex;
     justify-content: space-around;
@@ -329,6 +396,7 @@ form {
   position: absolute;
   bottom: 16px;
   left: 17px;
+
   button {
     width: 32px;
     height: 3px;

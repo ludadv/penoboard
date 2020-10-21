@@ -1,5 +1,25 @@
 // ---------------------------- BEGIN SCRIPTS ----------------------------
 document.addEventListener("DOMContentLoaded", function () {
+  //animate
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){
+            $('.header').addClass("animate");
+        }
+        else{
+            $('.header').removeClass("animate");
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
     // validation form jquery
     $(document).ready(function(){
         $(".valid").validate({
