@@ -48,11 +48,11 @@ img {
   height: 75px;
   position: fixed;
   z-index: 3;
-  box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
   background-image: url("../img/header-fon.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
   transition: all 0.3s linear;
 
   &__content {
@@ -362,14 +362,18 @@ form {
 .certificates {
   padding: 55px 0 45px;
   text-align: center;
+  color: $textcolor-blue;
+  text-transform: uppercase;
+  font-weight: 700;
   &__title {
     font-size: 1.875rem;
     line-height: 1;
-    color: $textcolor-blue;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.625rem;
     padding-bottom: 20px;
+  }
+  &__subtitle {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+
   }
 
   &__box {
@@ -378,8 +382,15 @@ form {
   }
 }
 
-
-
+// contacts 
+.contacts {
+  max-width: 1225px;
+  width: 100%;
+  margin: 0 auto;
+  background-image: url("../img/contacts-fon.png");
+  height: 197px;
+  box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
+}
 
 
 
