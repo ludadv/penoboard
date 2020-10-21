@@ -14,6 +14,7 @@ body {
   box-sizing: border-box;
 }
 a {
+  display: inline-block;
   text-decoration: none;
 }
 ul {
@@ -183,8 +184,8 @@ img {
     max-width: 470px;
     width: 100% ;
     padding-left: 100px;
-
   }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -210,6 +211,14 @@ img {
         font-weight: 700;
       }
     }
+
+    .icon-green {
+      font-size: 1.375rem;
+      color: $textcolor-green;
+      &:hover {
+        color: $darkgreen;
+      }
+    }
   }
 
   .search-block {
@@ -224,20 +233,6 @@ img {
     opacity: 0.3;
   }
 
-  &__contacts {
-
-    a {
-      color: $textcolor-blue;
-      font-size: 1rem;
-      line-height: 1.1;
-      font-weight: 700;
-      transition: color .3s linear;
-
-      &:hover {
-        color: #110e4b;
-      }
-    }
-  }
 }
 
 .slider {
@@ -383,13 +378,28 @@ form {
 }
 
 // contacts 
-.contacts {
+.info-contacts {
   max-width: 1225px;
   width: 100%;
   margin: 0 auto;
   background-image: url("../img/contacts-fon.png");
   height: 197px;
   box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
+  color: $white;
+  text-align: center;
+  padding: 33px 0 28px;
+  &__title {
+    font-size: 1.875rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-size: 1.125rem;
+    line-height: 1;
+    &--indent {
+      line-height: 1.375rem;
+    }
+  }
 }
 
 
@@ -413,6 +423,30 @@ form {
     height: 3px;
     font-size: 0;
     margin-right: 4px;
+  }
+}
+
+.contacts {
+  a {
+    color: $textcolor-blue;
+    font-size: 1rem;
+    line-height: 1.1;
+    font-weight: 700;
+    transition: color .3s linear;
+
+    &:hover {
+      color: #110e4b;
+    }
+  }
+  &--box {
+    max-width: 365px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+    a {
+      color: $white;
+    }
   }
 }
 
