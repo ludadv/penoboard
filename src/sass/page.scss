@@ -45,6 +45,7 @@ img {
   margin: 0 auto;
 }
 .header {
+  max-width: 1920px;
   width: 100%;
   height: 75px;
   position: fixed;
@@ -151,8 +152,9 @@ img {
 }
 /*--------------------*/
 .slider-block {
+  position: relative;
   background-image: url("../img/slider-fon.jpg");
-  height: 938px;
+  height: 870px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -167,7 +169,7 @@ img {
 
   &__form {
     text-align: right;
-    padding-right: 15px;
+    padding: 15px 15px 0 0;
 
     a {
       color: $green;
@@ -224,6 +226,13 @@ img {
   .search-block {
     display: flex;
     align-items: flex-end;
+    a {
+      color: $textcolor-blue;
+      font-size: 1.5rem;
+      &:hover {
+        background-color: rgba(0, 0, 0, .1);
+      }
+    }
   }
 
   .line {
@@ -332,16 +341,23 @@ form {
     font-weight: 700;
   }
 
+  &__bignumber {
+    font-size: 10.188rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+  &__big {
+    font-size: 5.101rem;
+    line-height: 1;
+    font-weight: 700;
+    padding-top: 20px;
+  }
+
   &__right {
     display: flex;
     position: absolute;
     top: 150px;
     right: 0;
-
-    &__number {
-      font-size: 10.188rem;
-      line-height: 4.25rem;
-    }
   }
 
   &__bottom {
@@ -355,11 +371,12 @@ form {
 //certificates
 
 .certificates {
-  padding: 55px 0 45px;
+  padding: 55px;
   text-align: center;
   color: $textcolor-blue;
   text-transform: uppercase;
   font-weight: 700;
+  margin-bottom: 197px;
   &__title {
     font-size: 1.875rem;
     line-height: 1;
@@ -379,9 +396,12 @@ form {
 
 // contacts 
 .info-contacts {
+  position: absolute;
+  left: 50%;
+  top: -160px;
+  transform: translateX(-50%);
   max-width: 1225px;
   width: 100%;
-  margin: 0 auto;
   background-image: url("../img/contacts-fon.png");
   height: 197px;
   box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
@@ -401,6 +421,52 @@ form {
     }
   }
 }
+
+/*map*/
+.map {
+  position: relative;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 325px;
+  background-image: url("../img/footer-fon.jpg");
+  &__inner {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    color: $white;
+  }
+  &__copyright {
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    font-weight: 700;
+  }
+  &__social {
+  }
+}
+.banner {
+  max-width: 465px;
+  width: 100%;
+  height: 58px;
+  background-color: $white;
+}
+.banner-block {
+  font-size: 0.625rem;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.developer {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 
 
 
@@ -450,3 +516,14 @@ form {
   }
 }
 
+.units {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+
+  sup {
+    font-size: 2rem;
+    line-height: 1rem;
+    vertical-align: top;
+  }
+}

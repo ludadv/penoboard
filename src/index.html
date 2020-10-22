@@ -9,30 +9,6 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="header">
-            <div class="header__content">
-                <div class="container">
-                    <ul class="menu">
-                        <li class="menu__link">
-                            <a href="#" target="_blank">Главная</a>
-                            <i class="fas fa-caret-down"></i>
-                            <ul>
-                                <li><a href="#" target="_blank">Главная</a></li>
-                                <li><a href="#" target="_blank">Главная</a></li>
-                                <li><a href="#" target="_blank">Главная</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu__link"><a href="#" target="_blank">О компании</a></li>
-                        <li class="menu__link"><a href="#" target="_blank">Вакансии</a></li>
-                        <li class="menu__link"><a href="#" target="_blank">Продукция</a></li>
-                        <li class="menu__link"><a href="#" target="_blank">Фотогалерея</a></li>
-                        <li class="menu__link"><a href="#" target="_blank">Новости</a></li>
-                        <li class="menu__link"><a href="#" target="_blank">Статьи</a></li>
-                        <li class="menu__link"><a href="#" target="_blank">Контакты</a></li>
-                    </ul>
-                </div> <!--/container-->
-            </div> <!--header__fon-->
-        </div> <!--/header-->
         <div class="slider-block">
             <div class="container">
                 <div class="slider-block__inner">
@@ -52,11 +28,6 @@
                                 <input type="text" name="login" placeholder="login">
                                 <input type="text" name="pswd" placeholder="password">
                                 <button type="submit">Регистрация</button>
-<!--                                <input type="text" name="email" placeholder="email">-->
-<!--                                <input type="text" name="user" placeholder="name">-->
-<!--                                <input type="password" name="pswd" placeholder="password">-->
-<!--                                <input type="password" name="pswd" placeholder="confirm password">-->
-<!--                                <button type="submit">Вход в аккаунт</button>-->
                             </form>
                         </div>
                     </div>
@@ -83,7 +54,7 @@
                             <a href="mailto: info@penoboard.com">e-mail:info@penoboard.com;</a>
                             <div class="search-block">
                                 <div class="line"></div>
-                                <span class="iconify" data-icon="fe:search-plus" data-inline="false"></span>
+                                <a href="#"><span class="iconify" data-icon="fe:search-plus" data-inline="false"></span></a>
                             </div>
                         </div>
                     </div>
@@ -105,6 +76,31 @@
                 </div> <!--slider-->
             </div> <!--container-->
         </div> <!--/sliderblock-->
+        <div class="header">
+            <div class="header__content">
+                <div class="container">
+                    <ul class="menu">
+                        <li class="menu__link">
+                            <a href="#" target="_blank">Главная</a>
+                            <i class="fas fa-caret-down"></i>
+                            <ul>
+                                <li><a href="#" target="_blank">Главная</a></li>
+                                <li><a href="#" target="_blank">Главная</a></li>
+                                <li><a href="#" target="_blank">Главная</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__link"><a href="#" target="_blank">О компании</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Вакансии</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Продукция</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Фотогалерея</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Новости</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Статьи</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Контакты</a></li>
+                    </ul>
+                </div> <!--/container-->
+            </div> <!--header__fon-->
+        </div> <!--/header-->
+
 
         <div class="block-counter">
             <div class="container">
@@ -112,19 +108,18 @@
                     <div class="block-counter__title">Арифметика успеха</div>
                     <div class="block-counter__left">
                         <div class="block-counter__text">Территория предприятия</div>
-                        <div class="block-counter__number">
-                            <span class="count">25000</span>
-                        </div>
+                        <span class="block-counter__number"><span class="count">25000</span></span>
+                        <span class="units">м<sup>2</sup></span>
                     </div>
                     <div class="block-counter__right">
                         <div class="block-counter__text">на рынке</div>
-                        <div class="block-counter__number"><span class="count2">7</span></div>
+                        <span class="block-counter__bignumber count2">7</span>
+                        <span class="block-counter__big">лет</span>
                     </div>
                     <div class="block-counter__bottom">
                         <div class="block-counter__text">Годовой объем производства</div>
-                        <div class="block-counter__number">
-                            <span class="count3">180000 м3</span>
-                        </div>
+                        <span class="block-counter__number count3">180000</span>
+                        <span class="units">м<sup>3</sup></span>
                     </div>
                 </div> <!--/block-counter__inner-->
             </div> <!--/container-->
@@ -151,21 +146,45 @@
                 </div>
             </div>
         </div>
-        <div class="info-contacts">
-            <div class="info-contacts__title">контакты </div>
-            <div class="info-contacts__text">ООО «Производственно коммерческая фирма «Элит Пласт»</div>
-            <div class="info-contacts__text info-contacts__text--indent">73000, Украина, г. Херсон, пос. Антоновка, ул 23 Восточная, 41-А</div>
-            <div class="contacts contacts--box">
-                <a href="tel: +38(0552)314-410">тел:+38(0552)314-410;</a>
-                <a href="fax: +38(0552)359-214">факс:+38(0552)359-214;</a>
-                <a href="mailto: info@penoboard.com">e-mail:info@penoboard.com;</a>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43802.13832884368!2d32.681922648584255!3d46.67349365812874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c40e44807b346f%3A0x9af8f2a033a94e3c!2z0JDQvdGC0L7QvdC-0LLQutCwLCDQpdC10YDRgdC-0L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzM0ODU!5e0!3m2!1sru!2sua!4v1603308267390!5m2!1sru!2sua" width="100%" height="650" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="info-contacts">
+                <div class="info-contacts__title">контакты </div>
+                <div class="info-contacts__text">ООО «Производственно коммерческая фирма «Элит Пласт»</div>
+                <div class="info-contacts__text info-contacts__text--indent">73000, Украина, г. Херсон, пос. Антоновка, ул 23 Восточная, 41-А</div>
+                <div class="contacts contacts--box">
+                    <a href="tel: +38(0552)314-410">тел:+38(0552)314-410;</a>
+                    <a href="fax: +38(0552)359-214">факс:+38(0552)359-214;</a>
+                    <a href="mailto: info@penoboard.com">e-mail:info@penoboard.com;</a>
+                </div>
             </div>
         </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43802.13832884368!2d32.681922648584255!3d46.67349365812874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c40e44807b346f%3A0x9af8f2a033a94e3c!2z0JDQvdGC0L7QvdC-0LLQutCwLCDQpdC10YDRgdC-0L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzM0ODU!5e0!3m2!1sru!2sua!4v1603308267390!5m2!1sru!2sua" width="1920" height="333" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <div class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div><img src="img/bottom-icon.png" alt=""></div>
+                    <div class="footer__copyright">
+                    <div>2014 &copy;</div>
+                    <div class="footer__social">
+                        мы в социальных сетях
+                    </div>
+                    </div>
+                    <div class="footer__social">
+                        <span class="iconify footer__icon" data-icon="uim:linkedin-alt" data-inline="false"></span>
+                        <span class="iconify footer__icon" data-icon="entypo-social:vk" data-inline="false"></span>
+                    </div>
+                    <div class="banner"></div>
+                    <div class="banner-block">
+                        Баннерная система - 100bannerov.com -  продвижение сайтов
+                    </div>
+                    <div class="developer">Разработка сайта — студия WEZOM</div>
+
+                </div>
+            </div>
         </div>
     </div> <!--/wrapper-->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <script src="js/bundle.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvFqjf_cszczIrrw8yWWp1dAs7T-Ix5b4&callback=initMap"></script>
+    <script src="js/bundle.js"></script>
 </body>
 </html>
