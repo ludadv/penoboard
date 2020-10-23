@@ -1,10 +1,17 @@
 // ---------------------------- BEGIN SCRIPTS ----------------------------
 document.addEventListener("DOMContentLoaded", function () {
-    launchFullScreen(document.documentElement);
+    $( ".js-full" ).on( "click", function() {
+        launchFullScreen(document.documentElement);
+    });
+
+
     $( ".js-toggle" ).on( "click", function() {
         $(".menu").fadeIn();
     });
 
+//parallax
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene);
 
 
     //animate
@@ -189,6 +196,11 @@ function launchFullScreen(element) {
         element.webkitRequestFullScreen();
     }
 }
+
+//parallax
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+
 
 
 // ---------------------------- END SCRIPTS ----------------------------

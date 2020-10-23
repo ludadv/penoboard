@@ -14,14 +14,15 @@ $ = jQuery;
 
 /* include Validate */
 //= plugins/jquery.validate.min.js
-/* end include Magnific Popup */
+/* end include Validate */
 
 
-/* include Validate */
+/* include Spincrement */
 //= plugins/jquery.spincrement.min.js
-/* end include Magnific Popup */
+/* end include Spincrement */
 
-
-
+/* include Parallax */
+//= plugins/parallax.min.js
+/* end include Parallax */
 
 /* **************************** END PLUGINS **************************** */
