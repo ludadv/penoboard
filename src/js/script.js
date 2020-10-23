@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
             $('.header').removeClass("animate");
         }
     });
-
-    $(".valid").validate({
+    //validate
+    $(".first-valid").validate({
         rules: {
-            login: {
+            email: {
                 required: true,
                 minlength: 4,
                 maxlength: 16,
@@ -22,13 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 minlength: 6,
                 maxlength: 16,
             },
-            email:{
-                required: true,
-                email: true,
-            },
         },
         messages: {
-            login: {
+            email: {
                 required: "Это поле обязательно для заполнения",
                 minlength: "Логин должен быть минимум 4 символа",
                 maxlength: "Максимальное число символов - 16",
@@ -38,9 +34,52 @@ document.addEventListener("DOMContentLoaded", function () {
                 minlength: "Пароль должен быть минимум 6 символа",
                 maxlength: "Пароль должен быть максимум 16 символов",
             },
+        }
+    });
+
+    $(".second-valid").validate({
+        rules: {
+            email: {
+                required: true,
+                minlength: 4,
+                maxlength: 16,
+            },
+            name: {
+                required: true,
+                minlength: 6,
+                maxlength: 16,
+            },
+            password: {
+                required: true,
+                minlength: 6,
+                maxlength: 16,
+            },
+            confirm: {
+                required: true,
+                minlength: 6,
+                maxlength: 16,
+            },
+
+        },
+        messages: {
             email:{
                 required: "Это поле обязательно для заполнения",
                 email: "Email заполнен не корректно",
+            },
+            name: {
+                required: "Это поле обязательно для заполнения",
+                minlength: "Имя должно быть минимум 6 символа",
+                maxlength: "Имя должно быть максимум 16 символов",
+            },
+            password: {
+                required: "Это поле обязательно для заполнения",
+                minlength: "Пароль должен быть минимум 6 символа",
+                maxlength: "Пароль должен быть максимум 16 символов",
+            },
+            confirm: {
+                required: "Это поле обязательно для заполнения",
+                minlength: "Пароль должен быть минимум 6 символа",
+                maxlength: "Пароль должен быть максимум 16 символов",
             },
         }
     });

@@ -51,6 +51,7 @@ img {
   position: fixed;
   z-index: 3;
   background-image: url("../img/header-fon.jpg");
+  background-color: $green;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -251,8 +252,7 @@ img {
     position: absolute;
     bottom: 35px;
     left: 0;
-    max-width: 768px;
-    width: 100%;
+    width: 78%;
     background-color:rgba(1, 152, 59, .5);
     font-family: "EuropeExt Normal", sans-serif;
     color: $white;
@@ -308,6 +308,7 @@ form {
   height: 557px;
   background-image: url('../img/counter-block.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
 
   &__inner {
