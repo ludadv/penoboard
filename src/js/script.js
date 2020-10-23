@@ -1,6 +1,12 @@
 // ---------------------------- BEGIN SCRIPTS ----------------------------
 document.addEventListener("DOMContentLoaded", function () {
     launchFullScreen(document.documentElement);
+    $( ".js-toggle" ).on( "click", function() {
+        $(".menu").fadeIn();
+    });
+
+
+
     //animate
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1) {
