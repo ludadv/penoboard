@@ -356,15 +356,21 @@ form {
     margin-top: 20px;
   }
 }
-
 .block-counter {
+  position: relative;
   width: 100%;
   height: 557px;
-  //background-color: #2c2783;
+  background-color: #2c2783;
   background-image: url('../img/counter-block.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
 
   &__inner {
     position: relative;
@@ -423,7 +429,6 @@ form {
     top: 300px;
   }
 }
-
 //certificates
 
 .certificates {
@@ -502,7 +507,10 @@ form {
     line-height: 0.875rem;
     font-weight: 700;
   }
-  &__social {
+  &__icons {
+    font-size: 2.06rem;
+    color: $white;
+    padding: 10px 0;
   }
 }
 .banner {
