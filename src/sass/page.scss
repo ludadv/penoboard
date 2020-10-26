@@ -67,56 +67,56 @@ img {
   &.animate {
     height: 50px;
   }
-}
-.header-mobile {
-  display: flex;
-  background-color: $grey;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  height: 100%;
-  .icon-green {
-    font-size: 2rem;
-    color: $textcolor-green;
-  }
-  .menu-toggle {
-    display: block;
-    &__click {
-      position: relative;
-      display: block;
-      width: 20px;
-      height: 2px;
-      background-color: $white;
-      &::before,
-      &::after {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        background-color: $white;
-      }
-      &::before {
-        top: 8px;
-      }
-      &::after {
-        bottom: 8px;
-      }
+  .header-mobile {
+    display: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    .icon-green {
+      font-size: 2rem;
+      color: $textcolor-green;
     }
-  }
-  @media screen and (min-width: 768px) {
-    & {
-      display: none;
-      .menu-toggle {
-        display: none;
-      }
+    @media screen and (max-width: 320px) {
+      display: flex;
     }
+
   }
 }
 
+
+.menu-toggle {
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (min-width: 870px) {
+    display: none;
+  }
+  &__click {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: $white;
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      background-color: $white;
+    }
+    &::before {
+      top: 8px;
+    }
+    &::after {
+      bottom: 8px;
+    }
+  }
+}
 .menu {
   display: flex;
   flex-direction: row;
@@ -124,8 +124,7 @@ img {
   font-size: 1rem;
   line-height: 1;
   color: $white;
-  @media screen and (max-width: 768px) {
-    & {
+  @media screen and (max-width: 870px) {
       display: none;
       flex-direction: column;
       position: absolute;
@@ -136,13 +135,11 @@ img {
       &__link {
         width: 100%;
       }
-    }
   }
   &__link {
     position: relative;
     text-transform: uppercase;
     padding: 5px 0;
-    margin-right: 20px;
 
     a {
       color: $white;
@@ -222,7 +219,6 @@ img {
   position: relative;
   background-image: url("../img/slider-fon.jpg");
   background-color: $grey;
-  height: 870px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -230,9 +226,15 @@ img {
 
   &__inner {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    justify-content: space-between;
-    padding: 20px 0;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 0;
+
+    }
   }
 
   &__form {
@@ -246,20 +248,31 @@ img {
       }
     }
   }
-
+  &__logo {
+    display: none;
+    @media screen and (min-width: 768px){
+      display: block;
+    }
+  }
   &__right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     max-width: 470px;
     width: 100% ;
-    padding-left: 100px;
+    padding: 10px;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      padding-left: 100px;
+    }
   }
 
   &__content {
-    display: flex;
+    display: none;
     justify-content: space-between;
-
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
     .icon-green {
       font-size: 1.375rem;
       color: $textcolor-green;
@@ -367,12 +380,13 @@ form {
 .block-counter {
   position: relative;
   width: 100%;
-  height: 557px;
   background-color: #2c2783;
   background-image: url('../img/counter-block.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  color: $white;
+  text-transform: uppercase;
   .parallax {
     position: absolute;
     top: 0;
@@ -381,80 +395,120 @@ form {
   }
 
   &__inner {
-    position: relative;
-    color: $white;
-    text-transform: uppercase;
+    width: 100%;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      max-width: 1000px;
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 50px 0;
+    }
   }
 
   &__title {
-    font-size: 2.5rem;
-    line-height: 3;
+    font-size: 1.5em;
+    line-height: 1;
     text-align: center;
+    padding-top: 10px;
+    @media screen and (min-width: 768px) {
+      font-size: 2.5rem;
+      line-height: 3;
+    }
   }
 
   &__left {
-    position: absolute;
-    top: 150px;
-    left: 0;
+    width: 100%;
     text-align: right;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
 
   &__text {
-    font-size: 1.875rem;
+    font-size: 1rem;
     line-height: 1;
     padding: 20px;
+    @media screen and (min-width: 768px) {
+      font-size: 1.875rem;
+    }
+
   }
 
   &__number {
-    font-size: 4.5rem;
-    line-height: 1.875rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1rem;
+    @media screen and (min-width: 768px) {
+      font-size: 4.5rem;
+      line-height: 1.875rem;
+      font-weight: 700;
+    }
   }
 
   &__bignumber {
-    font-size: 10.188rem;
-    line-height: 4.25rem;
-    font-weight: 700;
+    font-size: 5rem;
+    line-height: 2.5rem;
+    @media screen and (min-width: 768px) {
+      font-size: 10.188rem;
+      line-height: 4.25rem;
+      font-weight: 700;
+    }
   }
   &__big {
-    font-size: 5.101rem;
-    line-height: 1;
-    font-weight: 700;
-    padding-top: 20px;
+    font-size: 2.5rem;
+    @media screen and (min-width: 768px) {
+      font-size: 5.101rem;
+      line-height: 1;
+      font-weight: 700;
+      padding-top: 20px;
+    }
   }
 
   &__right {
     display: flex;
-    position: absolute;
-    top: 150px;
-    right: 0;
+    width: 100%;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
 
   &__bottom {
-    width: 600px;
-    position: absolute;
-    left: 50%;
-    top: 300px;
+    padding-top: 0;
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      text-align: right;
+      padding-top: 80px;
+    }
   }
 }
 //certificates
 
 .certificates {
-  padding: 55px;
+  padding: 20px 10px;
   text-align: center;
   color: $textcolor-blue;
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 197px;
+  @media screen and (min-width: 768px) {
+    padding: 55px 0;
+  }
   &__title {
-    font-size: 1.875rem;
-    line-height: 1;
-    padding-bottom: 20px;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    @media screen and (min-width: 768px) {
+      font-size: 1.875rem;
+      line-height: 1.2;
+      padding-bottom: 20px;
+    }
   }
   &__subtitle {
-    font-size: 1.5rem;
-    padding-bottom: 5px;
-
+    font-size: 1rem;
+    @media screen and (min-width: 768px) {
+      font-size: 1.5rem;
+      padding-bottom: 5px;
+    }
   }
 
   &__box {
@@ -469,29 +523,27 @@ form {
   left: 50%;
   top: -160px;
   transform: translateX(-50%);
-  max-width: 1225px;
+  max-width: 1250px;
   width: 100%;
   background-image: url("../img/contacts-fon.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: $green;
-  height: 197px;
   box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
   color: $white;
   text-align: center;
-  padding: 33px 0 28px;
+  padding: 33px 5px 28px;
   &__title {
     font-size: 1.875rem;
     line-height: 1;
     text-transform: uppercase;
+    padding-bottom: 15px;
   }
   &__text {
     font-size: 1.125rem;
-    line-height: 1;
-    &--indent {
-      line-height: 1.375rem;
-    }
+    line-height: 1.125;
   }
 }
-
 /*map*/
 .map {
   position: relative;
@@ -523,12 +575,13 @@ form {
   }
 }
 .banner {
-  max-width: 465px;
   width: 100%;
+  max-width: 465px;
   height: 58px;
   background-color: $white;
+  margin-bottom: 10px;
 }
-.banner-block {
+.banner-text {
   font-size: 0.625rem;
   line-height: 1;
   text-transform: uppercase;
@@ -538,6 +591,7 @@ form {
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
+  padding-top: 15px;
 }
 
 
