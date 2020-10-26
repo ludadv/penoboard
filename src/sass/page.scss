@@ -68,41 +68,55 @@ img {
     height: 50px;
   }
 }
-.menu-toggle {
-  display: none;
-  justify-content: flex-end;
+.header-mobile {
+  display: flex;
+  background-color: $grey;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
-  padding-right: 70px;
-  @media screen and (max-width: 768px) {
-    & {
-      display: flex;
+  padding: 0 20px;
+  height: 100%;
+  .icon-green {
+    font-size: 2rem;
+    color: $textcolor-green;
+  }
+  .menu-toggle {
+    display: block;
+    &__click {
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $white;
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background-color: $white;
+      }
+      &::before {
+        top: 8px;
+      }
+      &::after {
+        bottom: 8px;
+      }
     }
   }
-  &__click {
-    position: relative;
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: $white;
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      background-color: $white;
+  @media screen and (min-width: 768px) {
+    & {
+      display: none;
+      .menu-toggle {
+        display: none;
+      }
     }
-    &::before {
-      top: 8px;
-    }
-    &::after {
-      bottom: 8px;
-    }
-
   }
 }
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -110,20 +124,18 @@ img {
   font-size: 1rem;
   line-height: 1;
   color: $white;
-  margin: 0 10px;
   @media screen and (max-width: 768px) {
     & {
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 100px;
-      right: 10px;
+      top: 77px;
+      right: 0;
       background-color: #01983b;
       text-align: center;
       &__link {
         width: 100%;
       }
-
     }
   }
   &__link {
@@ -209,6 +221,7 @@ img {
 .slider-block {
   position: relative;
   background-image: url("../img/slider-fon.jpg");
+  background-color: $grey;
   height: 870px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -247,28 +260,6 @@ img {
     display: flex;
     justify-content: space-between;
 
-    select {
-      border: none;
-      appearance: none;
-      font-size: 0.75rem;
-      color: $textcolor-blue;
-      text-transform: uppercase;
-      font-weight: 700;
-      background-image: url("../img/down-arrow.svg");
-      background-repeat: no-repeat;
-      background-position: left center;
-      padding-left: 10px;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, .1);
-      }
-
-      option {
-        color: $textcolor-blue;
-        font-weight: 700;
-      }
-    }
-
     .icon-green {
       font-size: 1.375rem;
       color: $textcolor-green;
@@ -304,21 +295,33 @@ img {
 
   &__text {
     position: absolute;
-    bottom: 35px;
+    bottom: 23px;
     left: 0;
     width: 78%;
     background-color:rgba(1, 152, 59, .5);
     font-family: "EuropeExt Normal", sans-serif;
     color: $white;
     text-transform: uppercase;
-    padding: 30px 10px 10px;
+    padding: 1rem 0.4rem 0.4rem;
+    @media screen and (min-width: 768px) {
+      & {
+        padding: 1.875rem 0.625rem 0.625rem;
+        bottom: 35px;
+      }
+    }
   }
 
   &__title {
-    font-size: 1.875rem;
+    font-size: 0.9em;
     line-height: 1;
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: 0.5em;
+    @media screen and (min-width: 768px) {
+      & {
+        font-size: 1.875em;
+        margin-bottom: 0.936em;
+      }
+    }
 
     &--align {
       text-align: center;
@@ -326,8 +329,13 @@ img {
   }
 
   &__subtitle {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     font-weight: 700;
+    @media screen and (min-width: 768px) {
+      & {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
 
@@ -464,6 +472,7 @@ form {
   max-width: 1225px;
   width: 100%;
   background-image: url("../img/contacts-fon.png");
+  background-color: $green;
   height: 197px;
   box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
   color: $white;
@@ -542,11 +551,41 @@ form {
   text-transform: uppercase;
 }
 
+select {
+  border: none;
+  appearance: none;
+  font-size: 0.75rem;
+  color: $textcolor-blue;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: url("../img/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 10px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  option {
+    color: $textcolor-blue;
+    font-weight: 700;
+  }
+}
+
+
 .custom-dots {
   display: flex;
   position: absolute;
-  bottom: 16px;
-  left: 17px;
+  bottom: 9px;
+  left: 10px;
+  @media screen and (min-width: 768px) {
+    & {
+      bottom: 16px;
+      left: 17px;
+    }
+  }
 
   button {
     width: 32px;
