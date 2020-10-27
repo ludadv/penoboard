@@ -40,7 +40,7 @@ img {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 100vh;
+  //min-height: 100vh;
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -58,12 +58,10 @@ img {
   background-position: center center;
   background-size: cover;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
-  z-index: 3;
+  z-index: 1;
   background-color: $green;
   transition: all 0.3s linear;
 
-  &:before {
-  }
   &.animate {
     height: 50px;
   }
@@ -80,7 +78,8 @@ img {
   &__icon {
     display: none;
     @media screen and (max-width: 767px) {
-      display: block
+      display: flex;
+      flex: 0 0 2rem;
     }
   }
   &__burger {
@@ -129,14 +128,17 @@ img {
       }
     }
   }
-  &__select {
-    color: $white;
-    font-size: 10px;
-    option {
-      color: $white;
+  &__social {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+      a{
+        font-size: 2rem;
+        color: $white;
+      }
+
     }
   }
-
 
 }
 
@@ -156,19 +158,17 @@ img {
       left: 0;
       width: 100%;
       height: 100%;
-      //display: none;
       flex-direction: column;
-      //position: absolute;
-      //top: 77px;
-      //right: 0;
       background-color: #01983b;
       text-align: center;
+    transition: all .3s linear;
       &__link {
         width: 100%;
       }
-    &.active {
-      top: 0;
-    }
+
+      &.active {
+        top: 0;
+      }
   }
   &__link {
     position: relative;
@@ -273,7 +273,10 @@ img {
 
   &__form {
     text-align: right;
-    padding: 15px 15px 0 0;
+    padding: 15px 0 0 0;
+    @media screen and (min-width: 768px) {
+      padding: 15px 15px 0 0;
+    }
 
     a {
       color: $green;
@@ -294,7 +297,7 @@ img {
     justify-content: center;
     max-width: 470px;
     width: 100% ;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     @media screen and (min-width: 768px) {
       padding-left: 100px;
@@ -326,14 +329,14 @@ img {
         background-color: rgba(0, 0, 0, .1);
       }
     }
+    .line {
+      width: 100%;
+      height: 2px;
+      background-color: $textcolor-blue;
+      opacity: 0.3;
+    }
   }
 
-  .line {
-    width: 100%;
-    height: 2px;
-    background-color: $textcolor-blue;
-    opacity: 0.3;
-  }
 
 }
 
@@ -684,6 +687,10 @@ select {
 }
 
 .contacts {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
   a {
     color: $textcolor-blue;
     font-size: 1rem;

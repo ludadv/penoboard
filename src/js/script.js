@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //burger
-
     $( ".js-toggle" ).on( "click", function() {
         $(".js-toggle, .menu").toggleClass('active');
     });
@@ -148,8 +147,6 @@ function countup(className) {
         }
     })
 }
-
-
 $(function () {
     countup("count", $(".count").text());
     countup("count2", $(".count2").text());
@@ -165,27 +162,30 @@ $('.single-item').slick({
 });
 
 //map
-var latlng = new google.maps.LatLng("46.679383", "32.687931");
-var myOptions = {
-    zoom: 17,
-    center: latlng,
-    navigationControlOptions: {
-        style: google.maps.NavigationControlStyle.SMALL
-    },
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-};
-var map = new google.maps.Map(document.getElementById("makemap_canvas"), myOptions);
-map.scrollwheel = true;
-map.setOptions({mapTypeControl: true});
 
-var marker = new google.maps.Marker({
-    position: {lat: 46.679383, lng: 32.687931},
-    map: map,
-    icon: {
-        url: "../img/marker.svg",
-        scaledSize: new google.maps.Size(64, 64)
-    }
-});
+
+function initMap() {
+    var latlng = new google.maps.LatLng("46.679383", "32.687931");
+    var myOptions = {
+        zoom: 17,
+        center: latlng,
+        navigationControlOptions: {
+            style: google.maps.NavigationControlStyle.SMALL
+        },
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("makemap_canvas"), myOptions);
+    map.scrollwheel = true;
+    map.setOptions({mapTypeControl: true});
+    var marker = new google.maps.Marker({
+        position: {lat: 46.679383, lng: 32.687931},
+        icon: {
+            src: 'http://maps.google.com/mapfiles/ms/micons/purple.png',
+            scaledSize: new google.maps.Size(64, 64)
+        }
+    });
+}
+
 
 //fullscreen
 function launchFullScreen(element) {
