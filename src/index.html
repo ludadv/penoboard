@@ -79,29 +79,25 @@
             </div> <!--container-->
         </div> <!--/sliderblock-->
         <div class="header">
-            <div class="inner-mobile">
-                <div class="header-mobile">
-                    <a href=""><img src="img/white-logo.png" alt=""></a>
-                    <select>
+<!--            <div class="container">-->
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__icon">
+                        <a href=""><img src="img/white-logo.png" alt=""></a>
+                    </div>
+                    <select class="header__select">
                         <option>ru</option>
                         <option>en</option>
                         <option>de</option>
                     </select>
-                    <div class="text-green">
+                    <div class="header__social">
                         <a href="#">
-                            <span class="iconify icon-green" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span>
+                            <span class="iconify" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span>
                         </a>
                         <a href="#">
-                            <span class="iconify icon-green" data-icon="entypo-social:vk-with-circle" data-inline="false"></span>
+                            <span class="iconify" data-icon="entypo-social:vk-with-circle" data-inline="false"></span>
                         </a>
                     </div>
-                </div>
-                <a href="#" class="js-toggle menu-toggle">
-                    <span class="menu-toggle__click"></span>
-                </a>
-            </div>
-            <div class="header__content">
-                <div class="container">
                     <ul class="menu">
                         <li class="menu__link">
                             <a href="#" target="_blank">Главная</a>
@@ -119,8 +115,15 @@
                         <li class="menu__link"><a href="#" target="_blank">Статьи</a></li>
                         <li class="menu__link"><a href="#" target="_blank">Контакты</a></li>
                     </ul>
-                </div> <!--/container-->
-            </div> <!--header__fon-->
+                    <div class="js-toggle header__burger">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--                    <div class="inner-mobile">-->
+<!--                    </div>-->
+<!--            </div> &lt;!&ndash;header__fon&ndash;&gt;-->
         </div> <!--/header-->
         <div class="block-counter">
             <div class="parallax">

@@ -45,106 +45,130 @@ img {
   margin: 0 auto;
 }
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
   max-width: 1920px;
   width: 100%;
   height: 75px;
-  position: fixed;
-  z-index: 3;
   background-image: url("../img/header-fon.jpg");
   background-color: $green;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  box-shadow: 0 3px 5px 0 rgba(0 ,0 ,0 ,0.5);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  background-color: $green;
   transition: all 0.3s linear;
 
-  &__content {
-    height: 100%;
-    display: flex;
-    align-items: center;
+  &:before {
   }
-
   &.animate {
     height: 50px;
   }
-  .header-mobile {
-    display: none;
-    flex-direction: row;
-    flex-wrap: nowrap;
+
+  &__inner {
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 100%;
     width: 100%;
-    .icon-green {
-      font-size: 2rem;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      padding: 0 10px;
+    }
+  }
+  &__icon {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block
+    }
+  }
+  &__burger {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex: 0 0 30px;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      span {
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        top: 9px;
+        transition: all .3s linear;
+      }
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all .3s linear;
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+      &.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+      &.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+      &.active span {
+        transform: scale(0);
+      }
+    }
+  }
+  &__select {
+    color: $white;
+    font-size: 10px;
+    option {
       color: $white;
     }
-    @media screen and (max-width: 320px) {
-      display: flex;
-    }
-
   }
-}
-.inner-mobile {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  justify-content: space-between;
+
 
 }
-.menu-toggle {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  padding-right: 10px;
-  &__click {
-    position: relative;
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: $white;
-    &::before,
-    &::after {
-      position: absolute;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      background-color: $white;
-    }
-    &::before {
-      top: 8px;
-    }
-    &::after {
-      bottom: 8px;
-    }
-  }
-  @media screen and (min-width: 870px) {
-    display: none;
-  }
-}
+
+
+
 .menu {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-size: 1rem;
   line-height: 1;
   color: $white;
-  @media screen and (max-width: 870px) {
-      display: none;
+  @media screen and (max-width: 767px) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      //display: none;
       flex-direction: column;
-      position: absolute;
-      top: 77px;
-      right: 0;
+      //position: absolute;
+      //top: 77px;
+      //right: 0;
       background-color: #01983b;
       text-align: center;
       &__link {
         width: 100%;
       }
+    &.active {
+      top: 0;
+    }
   }
   &__link {
     position: relative;
@@ -559,7 +583,7 @@ form {
   position: relative;
 }
 .footer {
-  position: absolute;
+  //position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;

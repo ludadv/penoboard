@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
         launchFullScreen(document.documentElement);
     });
 
+    //burger
 
     $( ".js-toggle" ).on( "click", function() {
-        $(".menu").fadeIn();
+        $(".js-toggle, .menu").toggleClass('active');
     });
 
 //parallax
