@@ -75,9 +75,10 @@ img {
     align-items: center;
     padding: 0 20px;
     height: 100%;
+    width: 100%;
     .icon-green {
       font-size: 2rem;
-      color: $textcolor-green;
+      color: $white;
     }
     @media screen and (max-width: 320px) {
       display: flex;
@@ -85,14 +86,20 @@ img {
 
   }
 }
+.inner-mobile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
 
-
+}
 .menu-toggle {
   display: flex;
   justify-content: flex-end;
-  @media screen and (min-width: 870px) {
-    display: none;
-  }
+  align-items: center;
+  height: 100%;
+  padding-right: 10px;
   &__click {
     position: relative;
     display: block;
@@ -115,6 +122,9 @@ img {
     &::after {
       bottom: 8px;
     }
+  }
+  @media screen and (min-width: 870px) {
+    display: none;
   }
 }
 .menu {
