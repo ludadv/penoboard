@@ -82,16 +82,21 @@
             <div class="container">
                 <div class="header__inner">
                     <div class="header__icon">
-                        <a href=""><img src="img/white-logo.png" alt=""></a>
+                        <a href="" target="_blank"><img src="img/white-logo.png" alt=""></a>
                     </div>
-                    <div class="header__social">
-                        <a href="#">
-                            <span class="iconify" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span>
+                    <div class="header__user">
+                        <a class="first-popup-link" href="#first-popup">
+                            <span class="iconify" data-icon="teenyicons:user-solid" data-inline="false"></span>
                         </a>
-                        <a href="#">
-                            <span class="iconify" data-icon="entypo-social:vk-with-circle" data-inline="false"></span>
+                        <a class="second-popup-link" href="#second-popup">
+                            <span class="iconify" data-icon="teenyicons:user-plus-solid" data-inline="false"></span>
                         </a>
                     </div>
+                    <select>
+                        <option>ru</option>
+                        <option>en</option>
+                        <option>de</option>
+                    </select>
                     <ul class="menu">
                         <li class="menu__link">
                             <a href="#" target="_blank">Главная</a>
@@ -164,22 +169,22 @@
                     <img src="img/prize.png" alt="">
                 </div>
             </div>
-        </div>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43802.13832884368!2d32.68192264858427!3d46.67349365812874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c40e44807b346f%3A0x9af8f2a033a94e3c!2z0JDQvdGC0L7QvdC-0LLQutCwLCDQpdC10YDRgdC-0L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzM0ODU!5e0!3m2!1sru!2sua!4v1603836657039!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            <div class="info-contacts">
-                <div class="info-contacts__fon">
-                    <img src="img/contacts-fon.png" alt="">
-                </div>
-                <div class="info-contacts__title">контакты </div>
-                <div class="info-contacts__text">ООО «Производственно коммерческая фирма «Элит Пласт»</div>
-                <div class="info-contacts__text info-contacts__text">73000, Украина, г. Херсон, пос. Антоновка, ул 23 Восточная, 41-А</div>
+        </div> <!--/certificates-->
+        <div class="info-contacts">
+            <img src="img/contacts-fon.png" alt="">
+            <div class="info-content">
+                <div class="info-content__title">контакты </div>
+                <div class="info-content__text">ООО «Производственно коммерческая фирма «Элит Пласт»</div>
+                <div class="info-content__text info-contacts__text">73000, Украина, г. Херсон, пос. Антоновка, ул 23 Восточная, 41-А</div>
                 <div class="contacts contacts--box">
                     <a href="tel: +38(0552)314-410">тел:+38(0552)314-410;</a>
                     <a href="fax: +38(0552)359-214">факс:+38(0552)359-214;</a>
                     <a href="mailto: info@penoboard.com">e-mail:info@penoboard.com;</a>
                 </div>
             </div>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43802.13832884368!2d32.68192264858427!3d46.67349365812874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c40e44807b346f%3A0x9af8f2a033a94e3c!2z0JDQvdGC0L7QvdC-0LLQutCwLCDQpdC10YDRgdC-0L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzM0ODU!5e0!3m2!1sru!2sua!4v1603836657039!5m2!1sru!2sua" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </div>
         <div class="footer">
             <div class="container">
@@ -192,14 +197,16 @@
                         </div>
                     </div>
                     <div class="footer__icons">
-                        <span class="iconify" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span>
-                        <span class="iconify" data-icon="entypo-social:vk-with-circle" data-inline="false"></span>
+                        <a href="#"><span class="iconify" data-icon="entypo-social:linkedin-with-circle" data-inline="false"></span></a>
+                        <a href="#"><span class="iconify" data-icon="entypo-social:vk-with-circle" data-inline="false"></span></a>
                     </div>
                     <div class="banner">Баннер</div>
                     <div class="banner-text">
                         Баннерная система - 100bannerov.com -  продвижение сайтов
                     </div>
-                    <div class="developer">Разработка сайта — студия WEZOM</div>
+                    <div class="developer">
+                        <a href="#">Разработка сайта — студия WEZOM</a>
+                    </div>
 
                 </div>
             </div>
