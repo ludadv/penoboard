@@ -16,6 +16,7 @@
   background-position: center center;
   background-size: cover;
   margin-top: 75px;
+  padding-bottom: 50px;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -54,10 +55,8 @@
     justify-content: center;
     max-width: 470px;
     width: 100% ;
-    //padding: 5px;
     text-align: center;
     @media screen and (min-width: 767px) {
-      //padding-left: 100px;
     }
   }
   &__content {
@@ -80,7 +79,7 @@
     align-items: flex-end;
     a {
       color: $textcolor-blue;
-      font-size: 1.5rem;
+      font-size: 1.813rem;
       &:hover {
         background-color: rgba(0, 0, 0, .1);
       }
@@ -100,9 +99,9 @@
   position: relative;
   &__text {
     position: absolute;
-    bottom: 23px;
+    bottom: 37px;
     left: 0;
-    width: 78%;
+    width: 79%;
     background-color:rgba(1, 152, 59, .5);
     font-family: "EuropeExt Normal", sans-serif;
     color: $white;
@@ -110,8 +109,8 @@
     padding: 1rem 0.4rem 0.4rem;
     @media screen and (min-width: 767px) {
       & {
-        padding: 1.875rem 0.625rem 0.625rem;
-        bottom: 35px;
+        padding:3.313rem 0 0.625rem 1.5rem;
+        //bottom: 35px;
       }
     }
   }
@@ -119,11 +118,9 @@
     font-size: 0.9em;
     line-height: 1;
     font-weight: 300;
-    margin-bottom: 0.5em;
     @media screen and (min-width: 767px) {
       & {
         font-size: 1.875em;
-        margin-bottom: 0.936em;
       }
     }
     &--align {
@@ -412,6 +409,7 @@ form {
     @media screen and (min-width: 767px) {
       font-size: 2.5rem;
       line-height: 3;
+      padding-top: 25px;
     }
   }
   &__left {
