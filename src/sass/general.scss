@@ -37,7 +37,10 @@ img {
   max-width: 990px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0 0 15px;
+  padding-left: 0;
+  @media screen and (min-width: 767px) {
+    padding-left: 15px ;
+  }
 }
 /*---------------------------------------------------*/
 

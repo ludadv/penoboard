@@ -9,11 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
         $(".js-toggle, .menu").toggleClass('active');
     });
 
-//parallax
-    var scene = document.getElementById('scene');
-    var parallaxInstance = new Parallax(scene);
-
-
     //animate
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1) {
@@ -22,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             $('.header').removeClass("animate");
         }
     });
+
     //validate
     $(".first-valid").validate({
         rules: {
@@ -49,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         }
     });
-
     $(".second-valid").validate({
         rules: {
             email: {
@@ -104,8 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
         focus: '#name',
         closeOnBgClick: true,
 
-        // When elemened is focused, some mobile browsers in some cases zoom in
-        // It looks not nice, so we disable it:
         callbacks: {
             beforeOpen: function () {
                 if ($(window).width() < 700) {
@@ -123,13 +116,12 @@ document.addEventListener("DOMContentLoaded", function () {
         closeBtnInside: true,
         zoom: {
             enabled: true,
-            duration: 300 // don't foget to change the duration also in CSS
+            duration: 300
         }
     });
 });
 
 /*counter*/
-
 function countup(className) {
     var countBlockTop = $("." + className).offset().top;
     var windowHeight = window.innerHeight;
@@ -162,8 +154,6 @@ $('.single-item').slick({
 });
 
 //map
-
-
 function initMap() {
     var latlng = new google.maps.LatLng("46.679383", "32.687931");
     var myOptions = {
@@ -198,9 +188,6 @@ function launchFullScreen(element) {
     }
 }
 
-//parallax
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
 
 
 
