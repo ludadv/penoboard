@@ -140,9 +140,9 @@ function countup(className) {
     })
 }
 $(function () {
-    countup("count", $(".count").text());
-    countup("count2", $(".count2").text());
-    countup("count3", $(".count3").text());
+    countup("js-count", $(".js-count").text());
+    countup("js-count2", $(".js-count2").text());
+    countup("js-count3", $(".js-count3").text());
 });
 
 

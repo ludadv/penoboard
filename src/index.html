@@ -9,6 +9,48 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__icon">
+                        <a href="" target="_blank"><img src="img/white-logo.png" alt=""></a>
+                    </div>
+                    <div class="header__user">
+                        <a class="first-popup-link" href="#first-popup">
+                            <span class="iconify" data-icon="teenyicons:user-solid" data-inline="false"></span>
+                        </a>
+                        <a class="second-popup-link" href="#second-popup">
+                            <span class="iconify" data-icon="teenyicons:user-plus-solid" data-inline="false"></span>
+                        </a>
+                    </div>
+                    <select>
+                        <option>ru</option>
+                        <option>en</option>
+                        <option>de</option>
+                    </select>
+                    <ul class="menu">
+                        <li class="menu__link active">
+                            <a href="#" target="_blank">Главная</a>
+                            <ul>
+                                <li><a href="#" target="_blank">Главная</a></li>
+                                <li><a href="#" target="_blank">Главная</a></li>
+                                <li><a href="#" target="_blank">Главная</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__link"><a href="#" target="_blank">О компании</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Вакансии</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Продукция</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Фотогалерея</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Новости</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Статьи</a></li>
+                        <li class="menu__link"><a href="#" target="_blank">Контакты</a></li>
+                    </ul>
+                    <div class="js-toggle header__burger">
+                        <span></span>
+                    </div>
+                </div> <!--/header__inner-->
+            </div> <!--/container-->
+        </div> <!--/header-->
         <div class="slider-block">
             <div class="container">
                 <div class="slider-block__inner">
@@ -77,110 +119,78 @@
                     </div>
                 </div> <!--slider-->
             </div> <!--container-->
-            <div class="header">
-                <div class="container">
-                    <div class="header__inner">
-                        <div class="header__icon">
-                            <a href="" target="_blank"><img src="img/white-logo.png" alt=""></a>
-                        </div>
-                        <div class="header__user">
-                            <a class="first-popup-link" href="#first-popup">
-                                <span class="iconify" data-icon="teenyicons:user-solid" data-inline="false"></span>
-                            </a>
-                            <a class="second-popup-link" href="#second-popup">
-                                <span class="iconify" data-icon="teenyicons:user-plus-solid" data-inline="false"></span>
-                            </a>
-                        </div>
-                        <select>
-                            <option>ru</option>
-                            <option>en</option>
-                            <option>de</option>
-                        </select>
-                        <ul class="menu">
-                            <li class="menu__link">
-                                <a href="#" target="_blank">Главная</a>
-                                <ul>
-                                    <li><a href="#" target="_blank">Главная</a></li>
-                                    <li><a href="#" target="_blank">Главная</a></li>
-                                    <li><a href="#" target="_blank">Главная</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu__link"><a href="#" target="_blank">О компании</a></li>
-                            <li class="menu__link"><a href="#" target="_blank">Вакансии</a></li>
-                            <li class="menu__link"><a href="#" target="_blank">Продукция</a></li>
-                            <li class="menu__link"><a href="#" target="_blank">Фотогалерея</a></li>
-                            <li class="menu__link"><a href="#" target="_blank">Новости</a></li>
-                            <li class="menu__link"><a href="#" target="_blank">Статьи</a></li>
-                            <li class="menu__link"><a href="#" target="_blank">Контакты</a></li>
-                        </ul>
-                        <div class="js-toggle header__burger">
-                            <span></span>
-                        </div>
-                    </div> <!--/header__inner-->
-                </div> <!--/container-->
-            </div> <!--/header-->
-            <div class="block-counter">
-                <div class="container">
-                        <div class="block-counter__title">Арифметика успеха</div>
-                    <div class="block-counter__inner">
-                        <div class="block-counter__left">
-                            <div class="block-counter__text">Территория предприятия</div>
-                            <span class="block-counter__number"><span class="count">25000</span></span>
-                            <span class="units">м<sup>2</sup></span>
-                        </div>
-                        <div class="block-counter__right">
-                            <div class="block-counter__text">на рынке</div>
-                            <span class="block-counter__bignumber count2">7</span>
-                            <span class="block-counter__big">лет</span>
-                        </div>
-                        <div class="block-counter__bottom">
-                            <div class="block-counter__text">Годовой объем производства</div>
-                            <span class="block-counter__number count3">180000</span>
-                            <span class="units">м<sup>3</sup></span>
-                        </div>
-                    </div> <!--/block-counter__inner-->
-                </div> <!--/container-->
-            </div> <!--/block-counter-->
-            <div class="certificates">
-                <div class="container">
-                    <div class="certificates__logo">
-                        <img src="img/color-logo.png" alt="">
-                        <img src="img/color-text.png" alt="">
+        </div> <!--/slider-block-->
+        <div class="block-counter">
+            <div class="container">
+                    <div class="block-counter__title">Арифметика успеха</div>
+                <div class="block-counter__inner">
+                    <div class="block-counter__left">
+                    <div class="block-counter__img">
+                        <img src="img/circle-left.png" alt="">
                     </div>
-                    <div class="certificates__title">сертификаты качества И ПРЕМИИ</div>
-                    <div class="certificates__box">
-                        <a class="popup-content" href="img/certificates-1.png"><img src="img/certificates-1.png" alt=""></a>
-                        <a class="popup-content" href="img/certificates-2.png"><img src="img/certificates-2.png" alt=""></a>
-                        <a class="popup-content" href="img/certificates-3.png"><img src="img/certificates-3.png" alt=""></a>
-                        <a class="popup-content" href="img/certificates-4.png"><img src="img/certificates-4.png" alt=""></a>
-                        <a class="popup-content" href="img/certificates-5.png"><img src="img/certificates-5.png" alt=""></a>
+                        <div class="block-counter__text">Территория предприятия</div>
+                        <span class="block-counter__number"><span class="js-count">25000</span></span>
+                        <span class="units">м<sup>2</sup></span>
                     </div>
-                    <div class="certificates__subtitle">
-                        Премия: </br>
-                        100 лучших товаров Украины  2010 и 2011
+                    <div class="block-counter__right">
+                        <div class="block-counter__img">
+                            <img src="img/circle-right.png" alt="">
+                        </div>
+                        <div class="block-counter__text">на рынке</div>
+                        <span class="block-counter__bignumber js-count2">7</span>
+                        <span class="block-counter__big">лет</span>
                     </div>
-                    <div class="certificates__logo">
-                        <img src="img/prize.png" alt="">
+                    <div class="block-counter__bottom">
+                        <div class="block-counter__img">
+                            <img src="img/circle-bottom.png" alt="">
+                        </div>
+                        <div class="block-counter__text">Годовой объем производства</div>
+                        <span class="block-counter__number js-count3">180000</span>
+                        <span class="units">м<sup>3</sup></span>
                     </div>
+                </div> <!--/block-counter__inner-->
+            </div> <!--/container-->
+        </div> <!--/block-counter-->
+        <div class="certificates">
+            <div class="container">
+                <div class="certificates__logo">
+                    <img src="img/color-logo.png" alt="">
+                    <img src="img/color-text.png" alt="">
                 </div>
-            </div> <!--/certificates-->
-            <div class="info-contacts">
-                <img src="img/contacts-fon.png" alt="">
-                <div class="info-content">
-                    <div class="info-content__title">контакты </div>
-                    <div class="info-content__text">ООО «Производственно коммерческая фирма «Элит Пласт»</div>
-                    <div class="info-content__text info-contacts__text">73000, Украина, г. Херсон, пос. Антоновка, ул 23 Восточная, 41-А</div>
-                    <div class="contacts contacts--box">
-                        <a href="tel: +38(0552)314-410">тел:+38(0552)314-410;</a>
-                        <a href="fax: +38(0552)359-214">факс:+38(0552)359-214;</a>
-                        <a href="mailto: info@penoboard.com">e-mail:info@penoboard.com;</a>
-                    </div>
+                <div class="certificates__title">сертификаты качества И ПРЕМИИ</div>
+                <div class="certificates__box">
+                    <a class="popup-content" href="img/certificates-1.png"><img src="img/certificates-1.png" alt=""></a>
+                    <a class="popup-content" href="img/certificates-2.png"><img src="img/certificates-2.png" alt=""></a>
+                    <a class="popup-content" href="img/certificates-3.png"><img src="img/certificates-3.png" alt=""></a>
+                    <a class="popup-content" href="img/certificates-4.png"><img src="img/certificates-4.png" alt=""></a>
+                    <a class="popup-content" href="img/certificates-5.png"><img src="img/certificates-5.png" alt=""></a>
+                </div>
+                <div class="certificates__subtitle">
+                    Премия: </br>
+                    100 лучших товаров Украины  2010 и 2011
+                </div>
+                <div class="certificates__logo">
+                    <img src="img/prize.png" alt="">
                 </div>
             </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43802.13832884368!2d32.68192264858427!3d46.67349365812874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c40e44807b346f%3A0x9af8f2a033a94e3c!2z0JDQvdGC0L7QvdC-0LLQutCwLCDQpdC10YDRgdC-0L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzM0ODU!5e0!3m2!1sru!2sua!4v1603836657039!5m2!1sru!2sua" width="100%" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div> <!--/certificates-->
+        <div class="info-contacts">
+            <img src="img/contacts-fon.png" alt="">
+            <div class="info-content">
+                <div class="info-content__title">контакты </div>
+                <div class="info-content__text">ООО «Производственно коммерческая фирма «Элит Пласт»</div>
+                <div class="info-content__text info-contacts__text">73000, Украина, г. Херсон, пос. Антоновка, ул 23 Восточная, 41-А</div>
+                <div class="contacts contacts--box">
+                    <a href="tel: +38(0552)314-410">тел:+38(0552)314-410;</a>
+                    <a href="fax: +38(0552)359-214">факс:+38(0552)359-214;</a>
+                    <a href="mailto: info@penoboard.com">e-mail:info@penoboard.com;</a>
+                </div>
             </div>
-            <div class="footer">
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43802.13832884368!2d32.68192264858427!3d46.67349365812874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c40e44807b346f%3A0x9af8f2a033a94e3c!2z0JDQvdGC0L7QvdC-0LLQutCwLCDQpdC10YDRgdC-0L3RgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNzM0ODU!5e0!3m2!1sru!2sua!4v1603836657039!5m2!1sru!2sua" width="100%" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="footer">
                 <div class="container">
                     <div class="footer__inner">
                         <div><img src="img/bottom-icon.png" alt=""></div>
@@ -205,7 +215,6 @@
                     </div>
                 </div>
             </div>
-        </div> <!--/slider-block-->
     </div> <!--/wrapper-->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <script  async defer
