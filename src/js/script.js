@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     $( ".js-toggle" ).on( "click", function() {
         $(".js-toggle, .menu").toggleClass('active');
     });
+    //select
+    $( ".lang" ).on( "click", function() {
+        $(".js-select-box").toggleClass('dropdown');
+    });
 
     //animate
     $(window).scroll(function () {
