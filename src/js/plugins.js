@@ -21,8 +21,6 @@ $ = jQuery;
 //= plugins/jquery.spincrement.min.js
 /* end include Spincrement */
 
-/* include Parallax */
-//= plugins/parallax.min.js
-/* end include Parallax */
+
 
 /* **************************** END PLUGINS **************************** */

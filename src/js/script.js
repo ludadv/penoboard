@@ -173,11 +173,11 @@ function initMap() {
     map.setOptions({mapTypeControl: true});
     var marker = new google.maps.Marker({
         position: {lat: 46.679383, lng: 32.687931},
-        map: map,
-        // icon: {
-        //     src: 'http://maps.google.com/mapfiles/ms/micons/purple.png',
-        //     scaledSize: new google.maps.Size(64, 64)
-        // }
+        // map: map,
+        icon: {
+            src: 'http://maps.google.com/mapfiles/ms/micons/purple.png',
+            scaledSize: new google.maps.Size(64, 64)
+        }
     });
 }
 
