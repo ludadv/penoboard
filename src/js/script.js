@@ -168,7 +168,7 @@ function initMap() {
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var map = new google.maps.Map(document.getElementById("makemap_canvas"), myOptions);
+    var map = new google.maps.Map(document.getElementById("map"), myOptions);
     map.scrollwheel = true;
     map.setOptions({mapTypeControl: true});
     var marker = new google.maps.Marker({
