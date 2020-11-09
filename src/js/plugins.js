@@ -16,11 +16,9 @@ $ = jQuery;
 //= plugins/jquery.validate.min.js
 /* end include Validate */
 
-
 /* include Spincrement */
 //= plugins/jquery.spincrement.min.js
 /* end include Spincrement */
-
 
 
 /* **************************** END PLUGINS **************************** */

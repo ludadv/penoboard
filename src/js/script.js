@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $( ".js-toggle" ).on( "click", function() {
         $(".js-toggle, .menu").toggleClass('active');
     });
-    //select
-    $( ".lang" ).on( "click", function() {
-        $(".js-select-box").toggleClass('dropdown');
-    });
 
     //animate
     $(window).scroll(function () {
@@ -115,13 +111,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     /*_______________________________*/
-    $('.popup-content').magnificPopup({
-        type: 'image',
-        closeBtnInside: true,
-        zoom: {
-            enabled: true,
-            duration: 300
-        }
+    // $('.popup-content').magnificPopup({
+    //     type: 'image',
+    //     closeBtnInside: true,
+    //     zoom: {
+    //         enabled: true,
+    //         duration: 300
+    //     }
+    // });
+    $('.gallery').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: '.popup-content', // the selector for gallery item
+            type: 'image',
+            gallery: {
+                enabled:true
+            }
+        });
     });
 });
 
