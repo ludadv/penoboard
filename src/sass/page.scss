@@ -52,10 +52,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 475px;
+    max-width: 419px;
     width: 100% ;
     text-align: center;
-    padding: 9px 0 0 50px;
+    padding-top: 9px;
     @media screen and (min-width: 767px) {
     }
   }
@@ -66,6 +66,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 13px;
     }
     .icon-green {
       font-size: 1.375rem;
@@ -103,7 +104,7 @@
   margin-bottom: 80px;
   &__text {
     position: absolute;
-    bottom: 37px;
+    bottom: 58px;
     left: 0;
     width: 79%;
     background-color:rgba(1, 152, 59, .5);
@@ -381,17 +382,10 @@ form {
   background-position: center center;
   color: $white;
   text-transform: uppercase;
-  margin-top: 0px;
+  padding: 10px 0 40px;
   @media screen and (min-width: 767px) {
     //margin-top: 83px;
   }
-  //.parallax {
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  bottom: 0;
-  //  right: 0;
-  //}
   &__inner {
     width: 100%;
     flex-direction: column;
@@ -412,17 +406,26 @@ form {
     @media screen and (min-width: 767px) {
       font-size: 2.5rem;
       line-height: 3;
-      padding-top: 25px;
     }
   }
   &__box1,
   &__box2 {
     width: 50%;
+  }
+  &__box1 {
     text-align: center;
+    margin-top: -80px;
+  }
+  &__box2 {
+    text-align: right;
+    margin-top: -64px;
   }
   &__box3 {
     width: 100%;
     text-align: center;
+    margin-top: -138px;
+    margin-left: 180px;
+
   }
   &__img {
     position: relative;
@@ -438,19 +441,18 @@ form {
     text-align: right;
     @media screen and (min-width: 767px) {
       width: 50%;
-      //background-image: url("/img/circle-left.png");
-      //background-repeat: no-repeat;
-      //background-size: cover;
-      //background-position: center center;
-
     }
   }
   &__text {
     font-size: 1rem;
     line-height: 1;
     padding: 20px;
+    position: absolute;
     @media screen and (min-width: 767px) {
+      padding: 0;
       font-size: 1.875rem;
+      top: 116px;
+      left: -18px;
     }
   }
   &__number {
@@ -458,8 +460,9 @@ form {
     line-height: 1rem;
     @media screen and (min-width: 767px) {
       font-size: 4.5rem;
-      line-height: 1.875rem;
+      line-height: 5.313rem;
       font-weight: 700;
+      text-align: right;
     }
   }
   &__bignumber {
@@ -662,7 +665,6 @@ form {
   line-height: 1;
   color: $green;
   text-transform: uppercase;
-  padding-top: 9px;
   a {
     vertical-align: middle;
   }

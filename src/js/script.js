@@ -164,25 +164,17 @@ $('.single-item').slick({
 
 //map
 function initMap() {
-    var latlng = new google.maps.LatLng("46.679383", "32.687931");
-    var myOptions = {
+    var myLatLng = new google.maps.LatLng("46.679383", "32.687931");
+    const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 15,
-        center: latlng,
-        navigationControlOptions: {
-            style: google.maps.NavigationControlStyle.SMALL
-        },
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map"), myOptions);
-    map.scrollwheel = true;
-    map.setOptions({mapTypeControl: true});
-    var marker = new google.maps.Marker({
-        position: {lat: 46.679383, lng: 32.687931},
-        // map: map,
-        icon: {
-            src: 'http://maps.google.com/mapfiles/ms/micons/purple.png',
-            scaledSize: new google.maps.Size(64, 64)
-        }
+        center: myLatLng,
+    });
+    const image = '../img/marker.png';
+    new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: "Hello World!",
+        icon: image,
     });
 }
 
