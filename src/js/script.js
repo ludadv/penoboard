@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    /*magnific from form*/
+    //magnific from form
     $('.first-popup-link, .second-popup-link').magnificPopup({
         type: 'inline',
         preloader: false,
@@ -120,7 +120,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/*counter*/
+// parallax
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+
+//counter
 function countup(className) {
     var countBlockTop = $("." + className).offset().top;
     var windowHeight = window.innerHeight;

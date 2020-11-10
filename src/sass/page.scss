@@ -153,14 +153,12 @@
   max-width: 1920px;
   width: 100%;
   padding: 25px 0;
-  background-image: url("../img/header-fon.jpg");
-  background-color: $green;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background: url('../img/pattern.png') $green;
+  background-position: 0 0;
+  background-repeat: repeat;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
   z-index: 4;
-  transition: all 0.3s linear;
+  transition: padding 0.3s linear;
   &.animate {
     padding: 15px 0;
   }
@@ -385,15 +383,20 @@ form {
 /*.block-counter*/
 .block-counter {
   position: relative;
-  width: 100%;
-  background-color: #093060;
-  background-image: url('../img/counter-block.jpg');
-  background-repeat: no-repeat;
+  background: url('../img/pattern.png'), linear-gradient(to bottom, #093163, #051931);
+  background-position: 0 0;
+  background-repeat: repeat;
   background-size: cover;
-  background-position: center center;
   color: $white;
   text-transform: uppercase;
-  padding: 10px 0 40px;
+  .parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+  }
   &__inner {
     width: 100%;
     flex-direction: column;
@@ -693,14 +696,12 @@ form {
 }
 
 select {
+  position: relative;
+  display: inline-block;
   appearance: none;
   padding: 0 10px;
   border: none;
   outline: none;
-  background-image: url('https://api.iconify.design/bx:bxs-down-arrow.svg');
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 8px;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
