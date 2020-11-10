@@ -389,6 +389,14 @@ form {
   background-size: cover;
   color: $white;
   text-transform: uppercase;
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+  @media screen and (min-width: 767px) {
+    padding: 10px 0 40px;
+  }
+
   .parallax {
     position: absolute;
     top: 0;
@@ -460,14 +468,27 @@ form {
     top: 50px;
     left: 0;
   }
-
-  &__left {
-    width: 100%;
-    text-align: right;
-    @media screen and (min-width: 767px) {
-      width: 50%;
-    }
+  &--left {
+    top: 116px;
+    left: -18px;
   }
+  &--right {
+    top: 88px;
+    left: 91px;
+  }
+  &--bottom {
+    top: 112px;
+    left: 61px;
+
+  }
+
+  //&__left {
+  //  width: 100%;
+  //  text-align: right;
+  //  @media screen and (min-width: 767px) {
+  //    width: 50%;
+  //  }
+  //}
   &__text {
     font-size: 1rem;
     line-height: 1;
@@ -476,8 +497,7 @@ form {
     @media screen and (min-width: 767px) {
       padding: 0;
       font-size: 1.875rem;
-      top: 116px;
-      left: -18px;
+      //top: 116px;
     }
   }
   &__number {
@@ -555,15 +575,16 @@ form {
     font-size: 1rem;
     @media screen and (min-width: 767px) {
       font-size: 1.5rem;
-      padding-top: 10px;
+      padding-top: 31px;
     }
   }
   &__box {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    //padding: 0 27px 0 35px;
-
+  a {
+    padding: 0 18px;
+  }
   }
 }
 /*--------------------*/
@@ -592,7 +613,7 @@ form {
     //transform: translate(-50%, -50%);
     //z-index: 6;
     //text-align: center;
-    padding: 20px 10px;
+    padding: 34px 0 21px;
     text-align: center;
     &__title {
       font-size: 0.85rem;
