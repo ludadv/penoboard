@@ -196,6 +196,7 @@
     display: block;
     background-color: transparent;
     color: $white;
+
     option {
       font-size: 0.5rem;
     }
@@ -389,6 +390,14 @@ form {
   background-size: cover;
   color: $white;
   text-transform: uppercase;
+  &__logo {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    opacity: .2;
+    transform: translateY(-50%);
+  }
   img {
     height: 100%;
     object-fit: cover;
@@ -715,10 +724,11 @@ form {
     vertical-align: middle;
   }
 }
-
 select {
-  position: relative;
   display: inline-block;
+  background-image: url("../img/arrow-down-white.png");
+  background-position: left center;
+  background-repeat: no-repeat;
   appearance: none;
   padding: 0 10px;
   border: none;
@@ -728,6 +738,10 @@ select {
   text-transform: uppercase;
   color: $textcolor-blue;
   cursor: pointer;
+  @media screen and (min-width: 767px) {
+    background-image: url("../img/arrow-down.png");
+  }
+
 }
 
 
