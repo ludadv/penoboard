@@ -33,6 +33,7 @@ img {
   max-width: 100%;
   height: auto;
 }
+
 .container {
   max-width: 990px;
   width: 100%;
@@ -44,11 +45,6 @@ img {
 }
 /*---------------------------------------------------*/
 //custom select
-
-
-
-
-
 .custom-dots {
   display: flex;
   position: absolute;
@@ -106,7 +102,10 @@ img {
   font-weight: 700;
 
   sup {
-    font-size: 2.75rem;
-    vertical-align: top;
+    font-size: 1.5rem;
+    @media screen and (min-width: 768px) {
+      font-size: 2.75rem;
+      vertical-align: top;
+    }
   }
 }

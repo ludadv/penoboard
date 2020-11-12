@@ -121,8 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // parallax
-var scene = document.getElementById('scene');
-var parallaxInstance = new Parallax(scene);
+// var scene = document.getElementById('scene');
+// var parallaxInstance = new Parallax(scene);
 
 //counter
 function countup(className) {
